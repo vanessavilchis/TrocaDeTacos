@@ -24,4 +24,21 @@ public class Drink {
     public void setFlavor(String flavor) {
         this.flavor = flavor;
     }
+    public double getPrice() {
+        switch (size) {
+            case "Small":
+                return 2.00;
+            case "Medium":
+                return 2.50;
+            case "Large":
+                return 3.00;
+            default:
+                return 2.00;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return size + " " + flavor + " - $" + String.format("%.2f", getPrice());
+    }
 }
