@@ -81,6 +81,10 @@ public class Topping {
         }
         return isExtra ? (basePrice + extraPrice) : basePrice;
     }
+    @Override
+    public String toString() {
+        String extraText = isExtra ? " (EXTRA)" : "";
+        return name + extraText;
     }
 }
 
