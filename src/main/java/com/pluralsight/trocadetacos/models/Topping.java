@@ -54,7 +54,7 @@ public class Topping {
                     basePrice = 1.00;
                     extraPrice = 0.50;
                     break;
-                case "3-Taco":
+                case "3 Taco":
                     basePrice = 2.00;
                     extraPrice = 1.00;
                     break;
@@ -63,6 +63,22 @@ public class Topping {
                     extraPrice = 1.50;
                     break;
             }
+        } else if (category.equals("CHEESE")) {
+            switch (tacoSize) {
+                case "Single":
+                    basePrice = 0.75;
+                    extraPrice = 0.30;
+                    break;
+                case "3 Taco":
+                    basePrice = 1.50;
+                    extraPrice = 0.60;
+                    break;
+                case "Burrito":
+                    basePrice = 2.25;
+                    extraPrice = 0.90;
+                    break;
+            }
         }
     }
 }
+
