@@ -79,6 +79,8 @@ public class Topping {
                     break;
             }
         }
+        return isExtra ? (basePrice + extraPrice) : basePrice;
+    }
     }
 }
 
