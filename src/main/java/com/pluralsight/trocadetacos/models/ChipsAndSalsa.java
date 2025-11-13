@@ -15,4 +15,12 @@ public class ChipsAndSalsa {
     public void setSalsaType(String salsaType) {
         this.salsaType = salsaType;
     }
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Chips & " + salsaType + " Salsa - $" + String.format("%.2f", getPrice());
+    }
 }
