@@ -61,4 +61,10 @@ public class Order {
 
     public Object getTotal() {
     }
+
+    public boolean hasItems() {
+    }
+
+    public String getOrderSummary() {
+    }
 }
