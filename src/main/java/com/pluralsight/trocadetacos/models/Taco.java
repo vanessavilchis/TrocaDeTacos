@@ -13,6 +13,7 @@ public class Taco {
         this.toppings = new ArrayList<>();
         this.isDeepFried = false;
     }
+
     public String getSize() {
         return size;
     }
@@ -24,6 +25,7 @@ public class Taco {
     public String getTortillaType() {
         return tortillaType;
     }
+
     public void setTortillaType(String tortillaType) {
         this.tortillaType = tortillaType;
     }
@@ -54,5 +56,21 @@ public class Taco {
 
     public void clearToppings() {
         toppings.clear();
+    }
+
+    public double getPrice() {
+
+        double basePrice = 0.0;
+        switch (size) {
+            case "Single":
+                basePrice = 3.50;
+                break;
+            case "3 Taco":
+                basePrice = 9.00;
+                break;
+            case "Burrito":
+                basePrice = 8.50;
+                break;
+        }
     }
 }
