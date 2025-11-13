@@ -9,6 +9,7 @@ public abstract class MenuItem implements Priceable {
 
     public abstract String getDescription();
 
+
     public String getName() {
         return name;
     }
