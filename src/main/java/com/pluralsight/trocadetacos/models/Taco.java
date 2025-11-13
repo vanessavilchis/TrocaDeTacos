@@ -1,18 +1,23 @@
 package com.pluralsight.trocadetacos.models;
 import java.util.ArrayList;
 
-public class Taco {
+public class Taco extends MenuItem implements Customizable {
+
     private String size;
     private String tortillaType;
     private ArrayList<Topping> toppings;
     private boolean isDeepFried;
 
     public Taco(String size, String tortillaType) {
+        super(generateName(size, tortillaType));
 
         this.size = size;
         this.tortillaType = tortillaType;
         this.toppings = new ArrayList<>();
         this.isDeepFried = false;
+    }
+    private static String generateName(String size, String tortillaType) {
+        return size + " Taco - " + tortillaType;
     }
 
     public String getSize() {
@@ -57,6 +62,28 @@ public class Taco {
 
     public void clearToppings() {
         toppings.clear();
+    }
+
+    @Override
+    public String getDescription() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(size).append(" Taco - ").append(tortillaType);
+
+        if (isDeepFried) {
+            sb.append(" (DEEP FRIED)");
+        }
+
+        if (!toppings.isEmpty()) {
+            sb.append(" with ");
+            for (int i = 0; i < toppings.size(); i++) {
+                sb.append(toppings.get(i).getName());
+                if (i < toppings.size() - 1) {
+                    sb.append(", ");
+                }
+            }
+        }
+
+        return sb.toString();
     }
 
     public double getPrice() {
