@@ -1,4 +1,5 @@
 package com.pluralsight.trocadetacos.models;
 
-public class Priceable {
+public interface Priceable {
+    double getPrice();
 }
