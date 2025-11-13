@@ -1,4 +1,5 @@
 package com.pluralsight.trocadetacos.models;
 
-public class Customizable {
+public interface Customizable {
+    String customize ();
 }
