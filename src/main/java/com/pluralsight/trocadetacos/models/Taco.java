@@ -8,6 +8,7 @@ public class Taco {
     private boolean isDeepFried;
 
     public Taco(String size, String tortillaType) {
+
         this.size = size;
         this.tortillaType = tortillaType;
         this.toppings = new ArrayList<>();
