@@ -135,7 +135,7 @@ public class TacoScreen {
         Topping meatTopping = new Topping(meat, "MEAT");
         taco.addTopping(meatTopping);
 
-        System.out.print("Would you like EXTRA " + meat + "? (Y/N): ");
+        System.out.print("Would you like EXTRA (will cost extra) 1TACO - .50 | 3TACO 1.00 | BURRITO 1.50 " + meat + "? (Y/N): ");
         String extraChoice = scanner.nextLine().trim().toLowerCase();
         if (extraChoice.equals("y") || extraChoice.equals("yes")) {
             meatTopping.setExtra(true);
@@ -144,7 +144,8 @@ public class TacoScreen {
     }
     private void addCheese(Taco taco) {
         System.out.println("\n==================================================");
-        System.out.println("            CHEESE IS EXTRA +$0.75+)               ");
+        System.out.println("                  CHEESE IS EXTRA                  ");
+        System.out.println("        1TACO .75 | 3TACO .60 | BURRITO .90         ");
         System.out.println("==================================================");
         System.out.println("[1] Queso Fresco");
         System.out.println("[2] Cheddar");
@@ -264,7 +265,8 @@ public class TacoScreen {
         System.out.println("[3] Pico de Gallo");
         System.out.println("[4] Chipotle Sauce");
         System.out.println("[5] Habanero Sauce (MUY CALIENTE)");
-        System.out.println("[6] Lime Crema");
+        System.out.println("[6] Mild Salsa");
+        System.out.println("[7] EXTRA HOT! *CAUTION*");
         System.out.println("[0] Done / No sauce");
         System.out.print("\nEnter choices: ");
 
@@ -287,13 +289,16 @@ public class TacoScreen {
                     salsa = "Pico de Gallo";
                     break;
                 case "4":
-                    salsa = "Chipotle Sauce";
+                    salsa = "Chipotle Salsa";
                     break;
                 case "5":
-                    salsa = "Habanero Sauce";
+                    salsa = "Habanero Salsa";
                     break;
                 case "6":
-                    salsa = "Lime Crema";
+                    salsa = "Mild";
+                    break;
+                case "7":
+                    salsa = "XTRA HOT";
                     break;
             }
 
