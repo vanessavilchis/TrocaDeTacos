@@ -1,56 +1,96 @@
-#🚚💨    Welcome To  🌮
-#🚚💨 LA TRUCKA DE TACOS 🌮
-      #      APP
+# 🚚💨 Welcome To **LA TROCA DE TACOS** 🌮
 
-This is a Java console-based Point of Sale (POS) app built for a taco shop. 
-Customers can create completely customized taco orders, pick drinks, add chips & salsa, and get a digital receipt.
+This is a **Java console-based Point of Sale (POS)** app built for a taco shop.  
+Customers can create fully customized taco orders, pick drinks, add chips & salsa, and receive a digital receipt.
 
-##Goals 
+---
 
-Replace handwritten orders
+## 🎯 Goals
+- Replace handwritten orders
+- Allow full customization of every item
+- Generate digital receipts
+- Keep the experience simple and user-friendly
+- Demonstrate clean, professional Java design practices
 
-Allow full customization of every item
+---
 
-Generate digital receipts
+## ✨ What It Can Do
 
-Keep the experience simple and easy to follow
+### 🌮 Build-Your-Own Taco
 
-Show professional Java design practices
+**Choose:**
 
-##✨ What It Can Do
-##🌮 Build-Your-Own Taco
+#### 🟫 Sizes
+- Single Taco — **$3.50**
+- 3-Taco Plate — **$9.00**
+- Burrito — **$8.50**
 
-##Choose:
+#### 🌾 Tortillas
+- Corn
+- Flour
+- Hard Shell
+- Bowl
 
-Sizes: Single Taco ($3.50), 3-Taco Plate ($9.00), Burrito ($8.50)
+#### 🥩 Premium Toppings (extra cost)
+**Meats (6):**  
+Carne Asada, Pollo, Carnitas, Al Pastor, Barbacoa, Pescado
 
-Tortillas: Corn, Flour, Hard Shell or Bowl
+**Cheeses (4):**  
+Queso Fresco, Cheddar, Monterey Jack, Cotija
 
-Premium Toppings (priced):
+**Extras:**  
+Option to add extra meat or extra cheese
 
-6 meats: Carne Asada, Pollo, Carnitas, Al Pastor, Barbacoa, Pescado
+#### 🥗 Free Toppings
+Lettuce, Tomatoes, Onions, Cilantro, Jalapeños, Beans, Rice, Guac, Sour Cream
 
-4 cheeses: Queso Fresco, Cheddar, Monterey Jack, Cotija
+#### 🌶️ Free Salsas
+Salsa Verde, Salsa Roja, Pico de Gallo, Chipotle, Habanero, Lime Crema
 
-Option to add extra meat/cheese
+---
 
-Free Toppings: Lettuce, Tomatoes, Onions, Cilantro, Jalapeños, Beans, Rice, Guac, Sour Cream
+## 🥤 Drinks
+**Sizes:**
+- Small — $2
+- Medium — $2.50
+- Large — $3
 
-Free Salsas: Salsa Verde, Salsa Roja, Pico de Gallo, Chipotle, Habanero, Lime Crema
+**Flavors:**  
+8 total, including Agua Frescas: Horchata, Jamaica, Tamarindo
 
-##Drinks
+---
 
-Sizes: Small ($2), Medium ($2.50), Large ($3)
-8 flavors, including Agua Frescas (Horchata, Jamaica, Tamarindo)
+## 🫔 Chips & Salsa
+Fresh tortilla chips + choice of 6 salsas — **$1.50**
 
-Chips & Salsa
+---
 
-Fresh chips + choice of 6 salsas ($1.50)
+## 🧾 Receipts
+- Automatically generated with timestamps
+- Shows detailed itemized breakdown
+- Includes totals and extras
+- Saved inside `/receipts` as:  
+  **YYYYMMDD-HHMMSS.txt**
 
-##Receipts
+---
 
-Automatically generated with timestamps
+## ⚙️ Dynamic Pricing
+The **Topping** class automatically adjusts topping prices based on taco size.
+- Meats & cheeses have different costs for **Single**, **3-Taco Plate**, and **Burrito**
+- Choosing “extra” adds the appropriate additional charge
 
-Shows detailed item breakdown and total
+---
 
-Saved in /receipts as YYYYMMDD-HHMMSS.txt
+## ▶️ Using the App
+
+1. Start the app — see the welcome screen
+2. Create a new order
+3. Add items:
+    - Build tacos with toppings
+    - Choose drink size & flavor
+    - Add chips & salsa
+4. Review your full order
+5. Checkout to generate your digital receipt
+6. Your receipt will appear inside the **/receipts/** folder
+
+---
