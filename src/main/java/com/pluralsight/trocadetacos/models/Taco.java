@@ -63,7 +63,7 @@ public class Taco {
             case "Single":
                 basePrice = 3.50;
                 break;
-            case "3 Taco":
+            case "3-Taco":
                 basePrice = 9.00;
                 break;
             case "Burrito":

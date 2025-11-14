@@ -223,7 +223,7 @@ public class OrderScreen implements Displayable {
                 System.out.println("\n✅ Order complete! 💃🏻 ");
                 System.out.println("Receipt saved");
                 System.out.println("\n🌮 Thank you for your order! 🌮\n");
-                System.out.println("\n Your order will be out shortly! Enjoy! ");
+                System.out.println(" Your order will be out shortly! Enjoy! ");
             } else {
                 System.out.println("\n Warning! Receipt could not be saved, but order has been submitted!");
                 System.out.println("\n Your order will be out shortly!");

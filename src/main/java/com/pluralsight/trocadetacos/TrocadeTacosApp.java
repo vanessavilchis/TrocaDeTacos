@@ -14,7 +14,7 @@ public class TrocadeTacosApp {
 
         System.out.println("\n");
         System.out.println(GREEN + "=====================================================" + RESET);
-        System.out.println(WHITE + "        🚚💨  LA TRUCKA DE TACOS  🚚💨" + RESET);
+        System.out.println(WHITE + "        🚚💨  LA TROCA DE TACOS  🚚💨" + RESET);
         System.out.println(RED + "=====================================================" + RESET);
         System.out.println();
         System.out.println(WHITE + " 🌵 Fresh • Fast • Fiesta 🌵 |  🇲🇽  Authentic Tacos " + RESET);

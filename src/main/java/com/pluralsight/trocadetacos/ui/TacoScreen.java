@@ -47,6 +47,7 @@ public class TacoScreen {
         System.out.println("[1] Corn Tortilla");
         System.out.println("[2] Flour Tortilla");
         System.out.println("[3] Hard Shell");
+        System.out.println("[4] Bowl  ");
         System.out.println("[0] Cancel");
         System.out.print("\nSelect a number choice: ");
 
@@ -92,13 +93,13 @@ public class TacoScreen {
 
     private void addMeat(Taco taco) {
         System.out.println("\n==================================================");
-        System.out.println("                  SELECT MEAT (+$1.00+)            ");
+        System.out.println("                  SELECT MEAT                      ");
         System.out.println("==================================================");
         System.out.println("[1] Carne Asada (Grilled Beef)");
         System.out.println("[2] Pollo (Chicken)");
         System.out.println("[3] Carnitas (Braised Pork)");
         System.out.println("[4] Al Pastor (Marinated Pork)");
-        System.out.println("[5] Barbacoa (Slow-cooked Beef)");
+        System.out.println("[5] Chorizo (Spicy Sausage)");
         System.out.println("[6] Pescado (Fish)");
         System.out.println("[0] No meat");
         System.out.print("\nSelect a number choice: ");
@@ -120,7 +121,7 @@ public class TacoScreen {
                 meat = "Al Pastor";
                 break;
             case "5":
-                meat = "Barbacoa";
+                meat = "Chorizo";
                 break;
             case "6":
                 meat = "Pescado";
@@ -134,7 +135,7 @@ public class TacoScreen {
         Topping meatTopping = new Topping(meat, "MEAT");
         taco.addTopping(meatTopping);
 
-        System.out.print("Would you like EXTRA " + meat + "? (+$0.50+) (Y/N): ");
+        System.out.print("Would you like EXTRA " + meat + "? (Y/N): ");
         String extraChoice = scanner.nextLine().trim().toLowerCase();
         if (extraChoice.equals("y") || extraChoice.equals("yes")) {
             meatTopping.setExtra(true);
@@ -178,11 +179,11 @@ public class TacoScreen {
         Topping cheeseTopping = new Topping(cheese, "CHEESE");
         taco.addTopping(cheeseTopping);
 
-        System.out.print("Would you like EXTRA " + cheese + "? (+$0.30+) (Y/N): ");
+        System.out.print("Would you like EXTRA " + cheese + "? (Y/N): ");
         String extraChoice = scanner.nextLine().trim().toLowerCase();
         if (extraChoice.equals("y") || extraChoice.equals("yes")) {
             cheeseTopping.setExtra(true);
-            System.out.println("🧀 Extra cheese added!");
+            System.out.println("Extra cheese added!");
         }
     }
 
