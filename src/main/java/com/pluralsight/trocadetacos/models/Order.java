@@ -1,6 +1,5 @@
 package com.pluralsight.trocadetacos.models;
 import java.util.ArrayList;
-
 public class Order {
     private ArrayList<Taco> tacos;
     private ArrayList<Drink> drinks;
@@ -11,6 +10,8 @@ public class Order {
         this.drinks = new ArrayList<>();
         this.chips = new ArrayList<>();
     }
+
+    // Getters
     public ArrayList<Taco> getTacos() {
         return tacos;
     }
@@ -23,6 +24,7 @@ public class Order {
         return chips;
     }
 
+    // if a customer wants to add an item
     public void addTaco(Taco taco) {
         tacos.add(taco);
     }
@@ -52,6 +54,7 @@ public class Order {
             chips.remove(index);
         }
     }
+
     public void clearOrder() {
         tacos.clear();
         drinks.clear();
@@ -77,9 +80,9 @@ public class Order {
     }
     public String getOrderSummary() {
         StringBuilder sb = new StringBuilder();
-        System.out.println("==================================================");
-        sb.append("                          ORDER SUMMARY\n");
-        System.out.println("==================================================");
+        sb.append("=".repeat(50)).append("\n");
+        sb.append("           ORDER SUMMARY\n");
+        sb.append("=".repeat(50)).append("\n\n");
 
         if (!tacos.isEmpty()) {
             sb.append("TACOS:\n");
@@ -107,9 +110,9 @@ public class Order {
             sb.append("\n");
         }
 
-        System.out.println("==================================================");
-        sb.append(String.format("         TOTAL:  $%.2f\n", getTotal()));
-        System.out.println("==================================================");
+        sb.append("=".repeat(50)).append("\n");
+        sb.append(String.format("TOTAL: $%.2f\n", getTotal()));
+        sb.append("=".repeat(50)).append("\n");
 
         return sb.toString();
     }
@@ -119,4 +122,5 @@ public class Order {
         return getOrderSummary();
     }
 }
+
 

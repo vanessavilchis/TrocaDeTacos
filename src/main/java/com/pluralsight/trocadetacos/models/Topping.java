@@ -8,7 +8,7 @@ public class Topping {
     public Topping(String name, String category) {
         this.name = name;
         this.category = category;
-        this.isExtra = false;
+        this.isExtra = false;  // Default to no extra
     }
 
     public Topping(String name, String category, boolean isExtra) {
@@ -16,7 +16,6 @@ public class Topping {
         this.category = category;
         this.isExtra = isExtra;
     }
-
     public String getName() {
         return name;
     }
@@ -40,11 +39,11 @@ public class Topping {
     public void setExtra(boolean extra) {
         isExtra = extra;
     }
-
     public double getPrice(String tacoSize) {
         if (category.equals("REGULAR") || category.equals("SAUCE")) {
             return 0.0;
         }
+
         double basePrice = 0.0;
         double extraPrice = 0.0;
 
@@ -54,7 +53,7 @@ public class Topping {
                     basePrice = 1.00;
                     extraPrice = 0.50;
                     break;
-                case "3 Taco":
+                case "3-Taco":
                     basePrice = 2.00;
                     extraPrice = 1.00;
                     break;
@@ -69,7 +68,7 @@ public class Topping {
                     basePrice = 0.75;
                     extraPrice = 0.30;
                     break;
-                case "3 Taco":
+                case "3-Taco":
                     basePrice = 1.50;
                     extraPrice = 0.60;
                     break;
@@ -81,10 +80,12 @@ public class Topping {
         }
         return isExtra ? (basePrice + extraPrice) : basePrice;
     }
+
     @Override
     public String toString() {
         String extraText = isExtra ? " (EXTRA)" : "";
         return name + extraText;
     }
 }
+
 

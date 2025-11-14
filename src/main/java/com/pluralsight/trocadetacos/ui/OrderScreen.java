@@ -18,7 +18,8 @@ public class OrderScreen {
             System.out.println("==================================================");
             System.out.println("                 📋 ORDER HERE                    ");
             System.out.println("==================================================");
-            int itemCount = order.getItems().size();
+
+            int itemCount = order.getTacos().size() + order.getDrinks().size() + order.getChips().size();
             System.out.println("\nCurrent items in order: " + itemCount);
             if (itemCount > 0) {
                 System.out.printf("Current total: $%.2f\n", order.getTotal());
