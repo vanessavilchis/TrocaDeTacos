@@ -17,10 +17,10 @@ Keep the experience simple and easy to follow
 
 Show professional Java design practices
 
-✨ What It Can Do
-🌮 Build-Your-Own Taco
+##✨ What It Can Do
+##🌮 Build-Your-Own Taco
 
-Choose:
+##Choose:
 
 Sizes: Single Taco ($3.50), 3-Taco Plate ($9.00), Burrito ($8.50)
 
@@ -38,7 +38,7 @@ Free Toppings: Lettuce, Tomatoes, Onions, Cilantro, Jalapeños, Beans, Rice, Gua
 
 Free Salsas: Salsa Verde, Salsa Roja, Pico de Gallo, Chipotle, Habanero, Lime Crema
 
-Drinks
+##Drinks
 
 Sizes: Small ($2), Medium ($2.50), Large ($3)
 8 flavors, including Agua Frescas (Horchata, Jamaica, Tamarindo)
@@ -47,7 +47,7 @@ Chips & Salsa
 
 Fresh chips + choice of 6 salsas ($1.50)
 
-Receipts
+##Receipts
 
 Automatically generated with timestamps
 
