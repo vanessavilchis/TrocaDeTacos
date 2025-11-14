@@ -139,7 +139,6 @@ public class Taco extends MenuItem implements Customizable {
                 sb.append("\n    - ").append(topping.toString());
             }
         }
-
         sb.append("\n  Price: $").append(String.format("%.2f", getPrice()));
 
         return sb.toString();

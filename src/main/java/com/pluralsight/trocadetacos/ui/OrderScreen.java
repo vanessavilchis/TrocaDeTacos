@@ -100,7 +100,7 @@ public class OrderScreen {
         }
         System.out.println("==================================================");
         System.out.println("                   DRINK MENU                     ");
-        System.out.println("           TRY OUR AGUA FRESCAS!            ");
+        System.out.println("           TRY OUR AGUA FRESCAS!                  ");
         System.out.println("==================================================");
         System.out.println("\n What flavor drink would you like?");
         System.out.println("[1] Coke");

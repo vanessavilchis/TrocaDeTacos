@@ -1,10 +1,10 @@
 package com.pluralsight.trocadetacos.models;
+
 import java.util.ArrayList;
 
 public class Order {
     private ArrayList<MenuItem> items;
 
-    //technically my constructor here:
     public Order() {
         this.items = new ArrayList<>();
     }
@@ -59,12 +59,33 @@ public class Order {
         return chips;
     }
 
-    public Object getTotal() {
+    public double getTotal() {
+        double total = 0.0;
+        for (MenuItem item : items) {
+            total += item.getPrice();
+        }
+        return total;
     }
 
     public boolean hasItems() {
+        return !items.isEmpty();
     }
 
     public String getOrderSummary() {
+        StringBuilder summary = new StringBuilder();
+        summary.append("\n==================================================\n");
+        summary.append("                 📋 ORDER SUMMARY                 \n");
+        summary.append("==================================================\n");
+
+        for (int i = 0; i < items.size(); i++) {
+            summary.append("\nItem ").append(i + 1).append(":\n");
+            summary.append(items.get(i).toString()).append("\n");
+        }
+
+        summary.append("\n==================================================\n");
+        summary.append(String.format("TOTAL: $%.2f\n", getTotal()));
+        summary.append("==================================================\n");
+
+        return summary.toString();
     }
 }
