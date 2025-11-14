@@ -24,7 +24,7 @@ public class OrderScreen {
                 System.out.printf("Current total: $%.2f\n", order.getTotal());
             }
             System.out.println("\nWhat would you like?");
-            System.out.println(" [1] Add Taco");
+            System.out.println(" [1] Add Entree ");
             System.out.println(" [2] Add Drink");
             System.out.println(" [3] Add Chips & Salsa");
             System.out.println(" [4] Checkout");
@@ -157,7 +157,7 @@ public class OrderScreen {
 
     private void addChips() {
         System.out.println("==================================================");
-        System.out.println("             🌶️ ADD CHIPS & SALSA              ");
+        System.out.println("             🌶️ ADD CHIPS & SALSA 💃🏻             ");
         System.out.println("==================================================");
 
         System.out.println("\nSelect salsa type - $1.50");
@@ -221,8 +221,8 @@ public class OrderScreen {
             if (filename != null) {
                 System.out.println("\n✅ Order complete!");
                 System.out.println("Receipt saved as: " + filename);
-                System.out.println("\n🌮 Thank you for your order! Enjoy! 🌮\n");
-                System.out.println("\n Your order will be out shortly!");
+                System.out.println("\n🌮 Thank you for your order! 🌮\n");
+                System.out.println("\n Your order will be out shortly! Enjoy! ");
             } else {
                 System.out.println("\n Warning! Receipt could not be saved, but order has been submitted!");
                 System.out.println("\n Your order will be out shortly!");
