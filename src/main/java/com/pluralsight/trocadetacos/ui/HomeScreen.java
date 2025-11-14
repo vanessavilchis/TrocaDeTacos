@@ -1,9 +1,10 @@
 package com.pluralsight.trocadetacos.ui;
 
 import com.pluralsight.trocadetacos.models.Order;
+import com.pluralsight.trocadetacos.models.Displayable;
 import java.util.Scanner;
 
-public class HomeScreen {
+public class HomeScreen implements Displayable {
     private Scanner scanner;
 
     public HomeScreen(Scanner scanner) {

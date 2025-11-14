@@ -3,7 +3,7 @@ import com.pluralsight.trocadetacos.models.*;
 import com.pluralsight.trocadetacos.services.ReceiptService;
 import java.util.Scanner;
 
-public class OrderScreen {
+public class OrderScreen implements Displayable {
     private Scanner scanner;
     private Order order;
 
@@ -11,7 +11,7 @@ public class OrderScreen {
         this.scanner = scanner;
         this.order = order;
     }
-
+    @Override
     public void display() {
         boolean ordering = true;
         while (ordering) {

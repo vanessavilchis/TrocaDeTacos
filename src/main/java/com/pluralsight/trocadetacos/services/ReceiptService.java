@@ -9,32 +9,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-
 public class ReceiptService {
-    private static final String RECEIPT_FOLDER = "com/pluralsight/truckadetacos/receipts";
+
     public ReceiptService() {
     }
 
-
     public String saveReceipt(Order order) {
-
-
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
         String timestamp = now.format(dateTimeFormatter);
-        String filename = RECEIPT_FOLDER + "/" + timestamp + ".txt";
-
+        String filename = "receipt_" + timestamp + ".txt";
 
         try (
                 FileWriter fileWriter = new FileWriter(filename);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)
         ) {
             bufferedWriter.write("==================================================\n");
-            bufferedWriter.write("           LA TRUCKA DE TACOS\n");
+            bufferedWriter.write("           LA TROCA DE TACOS\n");
             bufferedWriter.write("        Fresh • Fast • Fiesta\n");
             bufferedWriter.write("==================================================\n");
             bufferedWriter.write("\n");
+
             DateTimeFormatter displayFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm:ss a");
             String displayTime = now.format(displayFormatter);
 
@@ -43,11 +39,9 @@ public class ReceiptService {
 
             if (!order.getTacos().isEmpty()) {
                 bufferedWriter.write("TACOS:\n");
-
-
                 for (Taco taco : order.getTacos()) {
                     bufferedWriter.write(taco.toString() + "\n");
-                    bufferedWriter.write("\n");  // Blank line between tacos
+                    bufferedWriter.write("\n");
                 }
             }
 
@@ -66,22 +60,20 @@ public class ReceiptService {
                 }
                 bufferedWriter.write("\n");
             }
+
             bufferedWriter.write("==================================================\n");
             bufferedWriter.write(String.format("TOTAL: $%.2f\n", order.getTotal()));
-
             bufferedWriter.write("==================================================\n");
             bufferedWriter.write("\n");
             bufferedWriter.write("          Thank you for your order!\n");
             bufferedWriter.write("            ¡Hasta luego! 🌮\n");
-            bufferedWriter.write("\n");
             bufferedWriter.write("==================================================\n");
-            bufferedWriter.close();
-            System.out.println("✅ Receipt saved successfully!");
+
+            System.out.println("Receipt saved successfully! Have a great day!");
             return filename;
 
-
         } catch (IOException exception) {
-            System.out.println(" Error Writing Receipt: " + exception.getMessage());
+            System.out.println("Error Writing Receipt: " + exception.getMessage());
             exception.printStackTrace();
             return null;
         }

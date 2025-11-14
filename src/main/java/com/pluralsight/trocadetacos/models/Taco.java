@@ -1,23 +1,17 @@
 package com.pluralsight.trocadetacos.models;
 import java.util.ArrayList;
 
-public class Taco extends MenuItem implements Customizable {
-
+public class Taco {
     private String size;
     private String tortillaType;
     private ArrayList<Topping> toppings;
     private boolean isDeepFried;
 
     public Taco(String size, String tortillaType) {
-        super(generateName(size, tortillaType));
-
         this.size = size;
         this.tortillaType = tortillaType;
         this.toppings = new ArrayList<>();
         this.isDeepFried = false;
-    }
-    private static String generateName(String size, String tortillaType) {
-        return size + " Taco - " + tortillaType;
     }
 
     public String getSize() {
@@ -31,7 +25,6 @@ public class Taco extends MenuItem implements Customizable {
     public String getTortillaType() {
         return tortillaType;
     }
-
     public void setTortillaType(String tortillaType) {
         this.tortillaType = tortillaType;
     }
@@ -63,53 +56,14 @@ public class Taco extends MenuItem implements Customizable {
     public void clearToppings() {
         toppings.clear();
     }
-
-    @Override
-    public String getDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(size).append(" Taco - ").append(tortillaType);
-
-        if (isDeepFried) {
-            sb.append(" (DEEP FRIED)");
-        }
-
-        if (!toppings.isEmpty()) {
-            sb.append(" with ");
-            for (int i = 0; i < toppings.size(); i++) {
-                sb.append(toppings.get(i).getName());
-                if (i < toppings.size() - 1) {
-                    sb.append(", ");
-                }
-            }
-        }
-
-        return sb.toString();
-    }
-    @Override
-    public String customize() {
-        StringBuilder customization = new StringBuilder();
-        customization.append("Taco Customization:\n");
-        customization.append("  Size: ").append(size).append("\n");
-        customization.append("  Tortilla: ").append(tortillaType).append("\n");
-        customization.append("  Deep Fried: ").append(isDeepFried ? "Yes" : "No").append("\n");
-
-        if (!toppings.isEmpty()) {
-            customization.append("  Toppings:\n");
-            for (Topping topping : toppings) {
-                customization.append("    - ").append(topping.toString()).append("\n");
-            }
-        }
-
-        return customization.toString();
-    }
-    @Override
     public double getPrice() {
+
         double basePrice = 0.0;
         switch (size) {
             case "Single":
                 basePrice = 3.50;
                 break;
-            case "3-Taco":
+            case "3 Taco":
                 basePrice = 9.00;
                 break;
             case "Burrito":
@@ -124,6 +78,7 @@ public class Taco extends MenuItem implements Customizable {
 
         return basePrice + toppingTotal;
     }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -139,6 +94,7 @@ public class Taco extends MenuItem implements Customizable {
                 sb.append("\n    - ").append(topping.toString());
             }
         }
+
         sb.append("\n  Price: $").append(String.format("%.2f", getPrice()));
 
         return sb.toString();
