@@ -1,6 +1,8 @@
 # 🚚💨 Welcome To **LA TROCA DE TACOS** 🌮
 
 <img width="614" height="841" alt="Screenshot 2025-11-14 at 9 13 58 AM" src="https://github.com/user-attachments/assets/404a753b-f920-4bee-b05e-224329e388d6" />
+<img width="549" height="916" alt="Screenshot 2025-11-14 at 9 15 18 AM" src="https://github.com/user-attachments/assets/b181e922-f7dc-442b-80bc-55bab45c2ca0" />
+
 
 
 
