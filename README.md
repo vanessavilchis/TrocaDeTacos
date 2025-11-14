@@ -5,6 +5,7 @@
 
 
 
+
 This is a **Java console-based Point of Sale (POS)** app built for a taco shop.  
 Customers can create fully customized taco orders, pick drinks, add chips & salsa, and receive a digital receipt.
 
