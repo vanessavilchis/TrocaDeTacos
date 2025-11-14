@@ -220,8 +220,8 @@ public class OrderScreen implements Displayable {
             String filename = receiptService.saveReceipt(order);
 
             if (filename != null) {
-                System.out.println("\n✅ Order complete!");
-                System.out.println("Receipt saved as: " + filename);
+                System.out.println("\n✅ Order complete! 💃🏻 ");
+                System.out.println("Receipt saved");
                 System.out.println("\n🌮 Thank you for your order! 🌮\n");
                 System.out.println("\n Your order will be out shortly! Enjoy! ");
             } else {

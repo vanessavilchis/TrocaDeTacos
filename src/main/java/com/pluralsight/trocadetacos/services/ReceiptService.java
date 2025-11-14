@@ -1,4 +1,5 @@
 package com.pluralsight.trocadetacos.services;
+
 import com.pluralsight.trocadetacos.models.Order;
 import com.pluralsight.trocadetacos.models.Taco;
 import com.pluralsight.trocadetacos.models.Drink;
@@ -10,6 +11,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 public class ReceiptService {
+    private static final String RECEIPT_FOLDER = "receipts";
 
     public ReceiptService() {
     }
@@ -19,14 +21,14 @@ public class ReceiptService {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
 
         String timestamp = now.format(dateTimeFormatter);
-        String filename = "receipt_" + timestamp + ".txt";
+        String filename = RECEIPT_FOLDER + "/" + timestamp + ".txt";
 
         try (
                 FileWriter fileWriter = new FileWriter(filename);
                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)
         ) {
             bufferedWriter.write("==================================================\n");
-            bufferedWriter.write("           LA TROCA DE TACOS\n");
+            bufferedWriter.write("           LA TRUCKA DE TACOS\n");
             bufferedWriter.write("        Fresh • Fast • Fiesta\n");
             bufferedWriter.write("==================================================\n");
             bufferedWriter.write("\n");
@@ -67,13 +69,14 @@ public class ReceiptService {
             bufferedWriter.write("\n");
             bufferedWriter.write("          Thank you for your order!\n");
             bufferedWriter.write("            ¡Hasta luego! 🌮\n");
+            bufferedWriter.write("\n");
             bufferedWriter.write("==================================================\n");
 
-            System.out.println("Receipt saved successfully! Have a great day!");
+            System.out.println("Receipt saved successfully!");
             return filename;
 
         } catch (IOException exception) {
-            System.out.println("Error Writing Receipt: " + exception.getMessage());
+            System.out.println(" Error Writing Receipt: " + exception.getMessage());
             exception.printStackTrace();
             return null;
         }
