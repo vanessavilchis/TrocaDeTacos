@@ -1,91 +1,122 @@
 package com.pluralsight.trocadetacos.models;
-
 import java.util.ArrayList;
 
 public class Order {
-    private ArrayList<MenuItem> items;
+    private ArrayList<Taco> tacos;
+    private ArrayList<Drink> drinks;
+    private ArrayList<ChipsAndSalsa> chips;
 
     public Order() {
-        this.items = new ArrayList<>();
+        this.tacos = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.chips = new ArrayList<>();
     }
-
-    public void addTaco(Taco taco) {
-        items.add(taco);
-    }
-
-    public void addDrink(Drink drink) {
-        items.add(drink);
-    }
-
-    public void addChips(ChipsAndSalsa chipsAndSalsa) {
-        items.add(chipsAndSalsa);
-    }
-
-    public void addItem(MenuItem item) {
-        items.add(item);
-    }
-
-    public ArrayList<MenuItem> getItems() {
-        return items;
-    }
-
     public ArrayList<Taco> getTacos() {
-        ArrayList<Taco> tacos = new ArrayList<>();
-        for (MenuItem item : items) {
-            if (item instanceof Taco) {
-                tacos.add((Taco) item);
-            }
-        }
         return tacos;
     }
 
     public ArrayList<Drink> getDrinks() {
-        ArrayList<Drink> drinks = new ArrayList<>();
-        for (MenuItem item : items) {
-            if (item instanceof Drink) {
-                drinks.add((Drink) item);
-            }
-        }
         return drinks;
     }
 
     public ArrayList<ChipsAndSalsa> getChips() {
-        ArrayList<ChipsAndSalsa> chips = new ArrayList<>();
-        for (MenuItem item : items) {
-            if (item instanceof ChipsAndSalsa) {
-                chips.add((ChipsAndSalsa) item);
-            }
-        }
         return chips;
     }
 
+    public void addTaco(Taco taco) {
+        tacos.add(taco);
+    }
+
+    public void addDrink(Drink drink) {
+        drinks.add(drink);
+    }
+
+    public void addChips(ChipsAndSalsa chipsAndSalsa) {
+        chips.add(chipsAndSalsa);
+    }
+
+    public void removeTaco(int index) {
+        if (index >= 0 && index < tacos.size()) {
+            tacos.remove(index);
+        }
+    }
+
+    public void removeDrink(int index) {
+        if (index >= 0 && index < drinks.size()) {
+            drinks.remove(index);
+        }
+    }
+
+    public void removeChips(int index) {
+        if (index >= 0 && index < chips.size()) {
+            chips.remove(index);
+        }
+    }
+    public void clearOrder() {
+        tacos.clear();
+        drinks.clear();
+        chips.clear();
+
+    }
+    public boolean hasItems() {
+        return !tacos.isEmpty() || !drinks.isEmpty() || !chips.isEmpty();
+    }
     public double getTotal() {
         double total = 0.0;
-        for (MenuItem item : items) {
-            total += item.getPrice();
+        for (Taco taco : tacos) {
+            total += taco.getPrice();
         }
+        for (Drink drink : drinks) {
+            total += drink.getPrice();
+        }
+        for (ChipsAndSalsa chip : chips) {
+            total += chip.getPrice();
+        }
+
         return total;
     }
-
-    public boolean hasItems() {
-        return !items.isEmpty();
-    }
-
     public String getOrderSummary() {
-        StringBuilder summary = new StringBuilder();
-        summary.append("\n==================================================\n");
-        summary.append("                 📋 ORDER SUMMARY                 \n");
-        summary.append("==================================================\n");
+        StringBuilder sb = new StringBuilder();
+        System.out.println("==================================================");
+        sb.append("                          ORDER SUMMARY\n");
+        System.out.println("==================================================");
 
-        for (int i = 0; i < items.size(); i++) {
-            summary.append("\nItem ").append(i + 1).append(":\n");
-            summary.append(items.get(i).toString()).append("\n");
+        if (!tacos.isEmpty()) {
+            sb.append("TACOS:\n");
+            for (int i = 0; i < tacos.size(); i++) {
+                sb.append((i + 1)).append(". ");
+                sb.append(tacos.get(i).toString()).append("\n\n");
+            }
         }
 
-        summary.append("\n==================================================\n");
-        summary.append(String.format("TOTAL: $%.2f\n", getTotal()));
-        summary.append("==================================================\n");
+        if (!drinks.isEmpty()) {
+            sb.append("DRINKS:\n");
+            for (int i = 0; i < drinks.size(); i++) {
+                sb.append((i + 1)).append(". ");
+                sb.append(drinks.get(i).toString()).append("\n");
+            }
+            sb.append("\n");
+        }
 
-        return summary.toString();
+        if (!chips.isEmpty()) {
+            sb.append("CHIPS & SALSA:\n");
+            for (int i = 0; i < chips.size(); i++) {
+                sb.append((i + 1)).append(". ");
+                sb.append(chips.get(i).toString()).append("\n");
+            }
+            sb.append("\n");
+        }
+
+        System.out.println("==================================================");
+        sb.append(String.format("         TOTAL:  $%.2f\n", getTotal()));
+        System.out.println("==================================================");
+
+        return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return getOrderSummary();
     }
 }
+
