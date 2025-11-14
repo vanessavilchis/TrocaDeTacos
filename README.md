@@ -5,7 +5,7 @@ Customers can create fully customized taco orders, pick drinks, add chips & sals
 
 ---
 
-## 🎯 Goals
+## Goals
 - Replace handwritten orders
 - Allow full customization of every item
 - Generate digital receipts
@@ -14,24 +14,24 @@ Customers can create fully customized taco orders, pick drinks, add chips & sals
 
 ---
 
-## ✨ What It Can Do
+## What It Can Do
 
 ### 🌮 Build-Your-Own Taco
 
 **Choose:**
 
-#### 🟫 Sizes
+#### Sizes
 - Single Taco — **$3.50**
 - 3-Taco Plate — **$9.00**
 - Burrito — **$8.50**
 
-#### 🌾 Tortillas
+####  Tortillas
 - Corn
 - Flour
 - Hard Shell
 - Bowl
 
-#### 🥩 Premium Toppings (extra cost)
+#### Premium Toppings (extra cost)
 **Meats (6):**  
 Carne Asada, Pollo, Carnitas, Al Pastor, Barbacoa, Pescado
 
@@ -41,15 +41,15 @@ Queso Fresco, Cheddar, Monterey Jack, Cotija
 **Extras:**  
 Option to add extra meat or extra cheese
 
-#### 🥗 Free Toppings
+#### Free Toppings
 Lettuce, Tomatoes, Onions, Cilantro, Jalapeños, Beans, Rice, Guac, Sour Cream
 
-#### 🌶️ Free Salsas
+#### Free Salsas
 Salsa Verde, Salsa Roja, Pico de Gallo, Chipotle, Habanero, Lime Crema
 
 ---
 
-## 🥤 Drinks
+## Drinks
 **Sizes:**
 - Small — $2
 - Medium — $2.50
@@ -60,12 +60,12 @@ Salsa Verde, Salsa Roja, Pico de Gallo, Chipotle, Habanero, Lime Crema
 
 ---
 
-## 🫔 Chips & Salsa
+## Chips & Salsa
 Fresh tortilla chips + choice of 6 salsas — **$1.50**
 
 ---
 
-## 🧾 Receipts
+## Receipts
 - Automatically generated with timestamps
 - Shows detailed itemized breakdown
 - Includes totals and extras
@@ -74,14 +74,14 @@ Fresh tortilla chips + choice of 6 salsas — **$1.50**
 
 ---
 
-## ⚙️ Dynamic Pricing
+## Dynamic Pricing
 The **Topping** class automatically adjusts topping prices based on taco size.
 - Meats & cheeses have different costs for **Single**, **3-Taco Plate**, and **Burrito**
 - Choosing “extra” adds the appropriate additional charge
 
 ---
 
-## ▶️ Using the App
+## Using the App
 
 1. Start the app — see the welcome screen
 2. Create a new order
