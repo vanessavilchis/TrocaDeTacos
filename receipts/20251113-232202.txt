@@ -1,0 +1,29 @@
+==================================================
+           LA TRUCKA DE TACOS
+        Fresh • Fast • Fiesta
+==================================================
+
+Date: 11/13/2025 11:22:02 PM
+
+TACOS:
+3-Taco - Hard Shell
+  Toppings:
+    - Pescado (EXTRA)
+    - Queso Fresco
+  Price: $13.50
+
+DRINKS:
+Large Coke - $3.00
+Medium Horchata - $2.50
+
+CHIPS & SALSA:
+Chips & Mango Salsa - $1.50
+
+==================================================
+TOTAL: $20.50
+==================================================
+
+          Thank you for your order!
+            ¡Hasta luego! 🌮
+
+==================================================
