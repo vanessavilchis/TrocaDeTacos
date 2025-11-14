@@ -148,7 +148,7 @@ public class TacoScreen {
         System.out.println("==================================================");
         System.out.println("[1] Queso Fresco");
         System.out.println("[2] Cheddar");
-        System.out.println("[3] Monterey Jack");
+        System.out.println("[3] Oaxaca");
         System.out.println("[4] Cotija");
         System.out.println("[0] No cheese");
         System.out.print("\nEnter choice: ");
@@ -164,7 +164,7 @@ public class TacoScreen {
                 cheese = "Cheddar";
                 break;
             case "3":
-                cheese = "Monterey Jack";
+                cheese = "Oaxaca";
                 break;
             case "4":
                 cheese = "Cotija";

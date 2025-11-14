@@ -36,7 +36,7 @@ Customers can create fully customized taco orders, pick drinks, add chips & sals
 Carne Asada, Pollo, Carnitas, Al Pastor, Barbacoa, Pescado
 
 **Cheeses (4):**  
-Queso Fresco, Cheddar, Monterey Jack, Cotija
+Queso Fresco, Cheddar, Oaxaca, Cotija
 
 **Extras:**  
 Option to add extra meat or extra cheese
