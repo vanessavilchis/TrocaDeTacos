@@ -1,6 +1,7 @@
 # 🚚💨 Welcome To **LA TROCA DE TACOS** 🌮
 
-[TrocaDeTacos Flow Chart (1).pdf](https://github.com/user-attachments/files/23548940/TrocaDeTacos.Flow.Chart.1.pdf)
+<img width="614" height="841" alt="Screenshot 2025-11-14 at 9 13 58 AM" src="https://github.com/user-attachments/assets/404a753b-f920-4bee-b05e-224329e388d6" />
+
 
 
 
